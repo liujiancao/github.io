@@ -3,52 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>这是一个Demo</title>
+    <title>MotionCube</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+        #animated-element {
+            width: 100px;
+            height: 100px;
+            background-color: #007BFF;
+            position: relative;
+            animation: move 2s infinite;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-        }
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        h1 {
-            margin-top: 0;
-        }
-        p {
-            line-height: 1.5;
+
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+            50% {
+                left: calc(100% - 100px);
+            }
+            100% {
+                left: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome JustDemo</h1>
-    </header>
-    <main>
-        <h2>关于我</h2>
-        <p>个人介绍 Just Demo。</p>
-        <h2>Myxxxxxxx</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-        </ul>
-        <h2>Contact</h2>
-        <p>你可以通过以下方式联系我：</p>
-        <ul>
-            <li>邮箱：example@example.com</li>
-            <li>电话：123-456-7890</li>
-        </ul>
-    </main>
+    <div id="animated-element"></div>
 </body>
 </html>
